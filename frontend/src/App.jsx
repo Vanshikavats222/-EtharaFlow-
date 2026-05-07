@@ -10,7 +10,7 @@ function App() {
     e.preventDefault();
     const path = isLogin ? 'login' : 'signup';
     try {
-      const res = await axios.post(`http://localhost:5000/api/auth/${path}`, formData);
+      const res = await axios.post(`ethara-backend-production-2ae1.up.railway.app/api/auth/${path}`, formData);
       if (isLogin) {
         setUser(res.data.user);
         localStorage.setItem('token', res.data.token);
